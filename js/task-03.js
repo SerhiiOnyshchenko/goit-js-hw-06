@@ -13,6 +13,9 @@ const images = [
    },
 ];
 const ul = document.querySelector('.gallery');
+ul.style.display = 'flex';
+ul.style.columnGap = '20px';
+ul.style.listStyle = 'none';
 for (const el of images) {
-  ul.insertAdjacentHTML('beforeend',`<li><img src='${el.url}' alt='${el.alt}'></img></li>`);
+   ul.insertAdjacentHTML('beforeend', `<li><img src='${el.url}' alt='${el.alt}'></img></li>`);
 }

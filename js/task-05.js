@@ -1,10 +1,9 @@
 const inputElement = document.querySelector('input#name-input');
 const spanElementH1 = document.querySelector('span#name-output');
 
-inputElement.addEventListener('keyup', inputEVal);
-function inputEVal() {
+inputElement.addEventListener('input', () => {
    spanElementH1.innerHTML = inputElement.value;
-   if (!spanElementH1.innerHTML) {
+   if (!inputElement.value) {
       spanElementH1.innerHTML = 'Anonymous';
    }
-}
+});
