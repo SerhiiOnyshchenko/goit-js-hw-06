@@ -1,6 +1,6 @@
-const items = document.getElementsByClassName('item');
+const items = document.querySelectorAll('.item');
 console.log(`Number of categories: ${items.length}`);
-for (const el of items) {
-   console.log(`Category: ${el.querySelector('h2').innerHTML}`);
-   console.log(`Elements: ${el.getElementsByTagName('li').length}`);
-}
+items.forEach(element => {
+      console.log(`Category: ${element.querySelector('h2').innerHTML}`);
+      console.log(`Elements: ${element.getElementsByTagName('li').length}`);
+});

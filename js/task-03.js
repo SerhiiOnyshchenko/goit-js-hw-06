@@ -13,9 +13,14 @@ const images = [
    },
 ];
 const ul = document.querySelector('.gallery');
+const arrayLi = []
 ul.style.display = 'flex';
 ul.style.columnGap = '20px';
 ul.style.listStyle = 'none';
-for (const el of images) {
-   ul.insertAdjacentHTML('beforeend', `<li><img src='${el.url}' alt='${el.alt}'></img></li>`);
-}
+images.map(el => {
+	const liEl = document.createElement('li')
+		liEl.insertAdjacentHTML('beforeend', `<img src='${el.url}' alt='${el.alt}'></img>`);
+arrayLi.push(liEl)
+});
+ul.append(...arrayLi);
+
